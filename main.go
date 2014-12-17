@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-type cfPluginStats struct{}
+type cfPluginOrgs struct{}
 
 func fatalIf(err error) {
 	if err != nil {
@@ -16,7 +16,7 @@ func fatalIf(err error) {
 	}
 }
 
-func (c *cfPluginStats) Run(cliConnection plugin.CliConnection, args []string) {
+func (c *cfPluginOrgs) Run(cliConnection plugin.CliConnection, args []string) {
 	if args[0] == "rpaas-orgs" || args[0] == "rorgs" {
 		err := listOrganizations(cliConnection)
 		fatalIf(err)
@@ -58,7 +58,7 @@ func listOrganizations(cliConnection plugin.CliConnection) error {
 	return err
 }
 
-func (c *cfPluginStats) GetMetadata() plugin.PluginMetadata {
+func (c *cfPluginOrgs) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
 		Name: "rpaasPlugin",
 		Commands: []plugin.Command{
@@ -72,5 +72,5 @@ func (c *cfPluginStats) GetMetadata() plugin.PluginMetadata {
 }
 
 func main() {
-	plugin.Start(new(cfPluginStats))
+	plugin.Start(new(cfPluginOrgs))
 }
