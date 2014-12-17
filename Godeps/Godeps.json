@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/shinji62/cf-plugin-orgs",
+	"GoVersion": "go1.4",
+	"Deps": [
+		{
+			"ImportPath": "github.com/antonholmquist/jason",
+			"Rev": "c582bb15669fa4d3dd2209ef7e8818f8bd8c452c"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry/cli/plugin",
+			"Comment": "v6.7.0-108-g6da644b",
+			"Rev": "6da644b26795cba5010d70918b1e9b04c7a1a9ee"
+		}
+	]
+}
