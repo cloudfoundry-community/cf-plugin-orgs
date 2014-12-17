@@ -17,7 +17,7 @@ func fatalIf(err error) {
 }
 
 func (c *cfPluginOrgs) Run(cliConnection plugin.CliConnection, args []string) {
-	if args[0] == "rpaas-orgs" || args[0] == "rorgs" {
+	if args[0] == "test-orgs" || args[0] == "torgs" {
 		err := listOrganizations(cliConnection)
 		fatalIf(err)
 	} else {
@@ -60,11 +60,11 @@ func listOrganizations(cliConnection plugin.CliConnection) error {
 
 func (c *cfPluginOrgs) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
-		Name: "rpaasPlugin",
+		Name: "testPlugin",
 		Commands: []plugin.Command{
 			{
-				Name:     "rpaas-orgs",
-				Alias:    "rorgs",
+				Name:     "test-orgs",
+				Alias:    "torgs",
 				HelpText: "list ALL organisation",
 			},
 		},

@@ -23,9 +23,9 @@ Plugin rpaasPlugin successfully installed.
 #Connect as admin
 cf login ...
 #Use the plugin command
-cf rorgs
+cf torgs
 OR
-cf rpaas-orgs
+cf test-orgs
 ```
 
 Contributing
